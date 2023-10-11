@@ -57,17 +57,17 @@ services:
     env_file:
       - ./hadoop.env
 
-  jupyter:                                                                                                                                                                                                
-    container_name: jupyter
-    build:
-      context: ./docker-hadoop/jupyter
-    restart: always
-    ports:
-      - 8888:8888
-    user: root
-    volumes:
-      - ./:/home/jovyan/work
-    command: ["start.sh", "jupyter", "lab", "--NotebookApp.token=''"]
+  # jupyter:                                                                                                                                                                                                
+  #   container_name: jupyter
+  #   build:
+  #     context: ./docker-hadoop/jupyter
+  #   restart: always
+  #   ports:
+  #     - 8888:8888
+  #   user: root
+  #   volumes:
+  #     - ./:/home/jovyan/work
+  #   command: ["start.sh", "jupyter", "lab", "--NotebookApp.token=''"]
   
 volumes:
   hadoop_namenode:

@@ -1,6 +1,7 @@
 FROM python:3.9.0
 FROM openjdk:8-slim-buster
 RUN apt update && apt install libpq-dev python3-dev gcc python3-pip -y 
+RUN apt install curl -y
 RUN python3 -m pip install --upgrade pip && pip install notebook==6.4.12 ipython-sql==0.4.1 psycopg2==2.9.4  
 RUN pip3 uninstall -y sqlalchemy
 RUN pip3 install sqlalchemy==1.4.41
