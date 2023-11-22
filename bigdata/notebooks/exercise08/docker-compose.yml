@@ -6,7 +6,7 @@ services:
     platform: linux/amd64
     restart: always
     ports:
-      - 8888:8888
+      - 8889:8888
       - 4040:4040
     user: root
     volumes:
